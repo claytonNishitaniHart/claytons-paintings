@@ -33,6 +33,7 @@
   transform: translate(-50%, -50%);
   margin: 0;
   color: #d4fcf4;
+  animation: fadeInDelayed ease-in 2.5s;
 }
 
 .Gallery {
@@ -61,10 +62,22 @@
 
 @keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDelayed {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
