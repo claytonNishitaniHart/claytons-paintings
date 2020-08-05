@@ -1,57 +1,25 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
+
+import photo1 from './paintings/photo1.jpg';
 
 function App() {
-  const [date, setDate] = useState(null);
-  useEffect(() => {
-    async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.text();
-      setDate(newDate);
-    }
-    getDate();
-  }, []);
   return (
-    <main>
-      <h1>Create React App + Go API</h1>
-      <h2>
-        Deployed with{' '}
-        <a
-          href="https://vercel.com/docs"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Vercel
-        </a>
-        !
-      </h2>
-      <p>
-        <a
-          href="https://github.com/vercel/vercel/tree/master/examples/create-react-app"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          This project
-        </a>{' '}
-        was bootstrapped with{' '}
-        <a href="https://facebook.github.io/create-react-app/">
-          Create React App
-        </a>{' '}
-        and contains three directories, <code>/public</code> for static assets,{' '}
-        <code>/src</code> for components and content, and <code>/api</code>{' '}
-        which contains a serverless <a href="https://golang.org/">Go</a>{' '}
-        function. See{' '}
-        <a href="/api/date">
-          <code>api/date</code> for the Date API with Go
-        </a>
-        .
-      </p>
-      <br />
-      <h2>The date according to Go is:</h2>
-      <p>{date ? date : 'Loading date...'}</p>
-    </main>
+    <div>
+      <div className={'App'}>
+      </div>
+      <h1 className={'Heading'}>PAINT</h1>
+      <h2 className={'SubHeading'}>trying to become bob ross</h2>
+      <div className={'Gallery'}>
+        <div className={'Gallery-item'}>
+          <img src={photo1} className={'photo'} alt={'1'}/>
+          <p className={'Gallery-item-text'}>Island in the Wilderness</p>
+          <p className={'Gallery-item-text Gallery-item-info'}>me, 2020</p>
+        </div>
+      </div>
+    </div>
   );
+
 }
 
 export default App;

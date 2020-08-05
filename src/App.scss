@@ -1,0 +1,97 @@
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #a5ffd6, #ffa69e, #ff686b);
+  width: 100vw;
+  height: 100vh;
+  background-size: 600% 600%;
+  -webkit-animation: Waves 30s ease infinite;
+  -moz-animation: Waves 30s ease infinite;
+  animation: Waves 30s ease infinite;
+  z-index: -9999;
+}
+
+.Heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 5rem;
+  background: -webkit-linear-gradient(left, #00a896, #02c39a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  animation: fadeIn ease-in 2s;
+}
+
+.SubHeading {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #d4fcf4;
+}
+
+.Gallery {
+  margin-top: 100vh;
+  padding: 100px 0;
+  background-color: #283835;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 100vh;
+  &-item {
+    padding: 25px;
+    &-text {
+      padding-left: 10px;
+      color: #e8fdf8;
+    }
+    &-info {
+      font-style: italic;
+    }
+  }
+}
+
+.photo {
+  width: 500px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.bottom {
+  background-color: rgba(243, 243, 243, 0.89);
+  margin-top: 100vh;
+  height: 100vh;
+  clip-path: polygon(76% 5%, 100% 9%, 100% 100%, 0 100%, 0 0);
+}
+
+@-webkit-keyframes Waves {
+  0%{background-position:0 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0 50%}
+}
+@-moz-keyframes Waves {
+  0%{background-position:0 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0 50%}
+}
+@keyframes Waves {
+  0%{background-position:0 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0 50%}
+}
+
+@font-face {
+  font-family: 'Cabin', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap");
+}
