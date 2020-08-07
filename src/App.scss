@@ -134,3 +134,17 @@
   font-family: 'Cabin', sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap");
 }
+
+@media only screen and (max-width: 500px) {
+  .View-button {
+    clip-path: circle(100%);
+  }
+
+  .SubHeading {
+    top: 55%;
+  }
+
+  .photo {
+    width: 75vw;
+  }
+}
