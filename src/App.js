@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 
 import photo1 from './paintings/photo1.jpg';
+import photo2 from './paintings/photo2.jpg';
 
 function App() {
   function takeALook() {
@@ -22,6 +23,11 @@ function App() {
         <div className={'Gallery-item'}>
           <img src={photo1} className={'photo'} alt={'1'}/>
           <p className={'Gallery-item-text'}>Island in the Wilderness</p>
+          <p className={'Gallery-item-text Gallery-item-info'}>me, 2020</p>
+        </div>
+        <div className={'Gallery-item'}>
+          <img src={photo2} className={'photo'} alt={'2'}/>
+          <p className={'Gallery-item-text'}>A Copper Winter</p>
           <p className={'Gallery-item-text Gallery-item-info'}>me, 2020</p>
         </div>
       </div>
